@@ -8,14 +8,16 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-	</header><!-- .entry-header -->
+<article class="container" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	
 
 	<?php twentysixteen_post_thumbnail(); ?>
 
-	<div class="entry-content">
+	<div class="container entry-content">
+	<div class="row">
+	<header class="entry-header">
+		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+	</header><!-- .entry-header -->
 		<?php
 		the_content();
 
@@ -28,6 +30,7 @@
 			'separator'   => '<span class="screen-reader-text">, </span>',
 		) );
 		?>
+	</div><!-- .row -->
 	</div><!-- .entry-content -->
 
 	<?php

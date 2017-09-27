@@ -106,7 +106,11 @@ get_header(); ?>
 			?>
 
 		</main><!-- .site-main -->
+			<br>
 	</div><!-- .content-area -->
 
+<div class="bottom-cover">
+<?php get_sidebar( 'content-bottom' ); ?>
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
+</div>

@@ -20,15 +20,16 @@ get_header(); ?>
 				<div class="page-content">
 					<p><?php _e( 'It looks like nothing was found at this location. Maybe try a search?', 'twentysixteen' ); ?></p>
 
-					<?php get_search_form(); ?>
+					
 				</div><!-- .page-content -->
 			</section><!-- .error-404 -->
 
 		</main><!-- .site-main -->
-
-		<?php get_sidebar( 'content-bottom' ); ?>
-
+			<br>
 	</div><!-- .content-area -->
 
-<?php get_sidebar(); ?>
+
+<div class="bottom-cover">
+<?php get_sidebar( 'content-bottom' ); ?>
 <?php get_footer(); ?>
+</div>

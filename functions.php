@@ -70,8 +70,8 @@ function twentysixteen_setup() {
 	 *  @since Twenty Sixteen 1.2
 	 */
 	add_theme_support( 'custom-logo', array(
-		'height'      => 240,
-		'width'       => 240,
+		'height'      => 42,
+		'width'       => 42,
 		'flex-height' => true,
 	) );
 
@@ -280,9 +280,6 @@ function twentysixteen_scripts() {
 	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css' );
 	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap-theme.css' );
 	
-
-
-
 	// Load the html5 shiv.
 	wp_enqueue_script( 'twentysixteen-html5', get_template_directory_uri() . '/js/html5.js', array(), '3.7.3' );
 	wp_script_add_data( 'twentysixteen-html5', 'conditional', 'lt IE 9' );
@@ -454,5 +451,86 @@ function twentysixteen_widget_tag_cloud_args( $args ) {
 	return $args;
 }
 add_filter( 'widget_tag_cloud_args', 'twentysixteen_widget_tag_cloud_args' );
+
+
+// add smartlun custom css
+function my_enqueue_custom_stylesheets() {
+    if ( ! is_admin() ) {
+        wp_enqueue_style( 'custom-style', get_template_directory_uri() . '/css/custom-style.css' );
+    }
+}
+add_action( 'wp_enqueue_scripts', 'my_enqueue_custom_stylesheets', 11 );
+
+
+
+// Disable WordPress Admin Bar for all users. 
+show_admin_bar(false);
+
+// Smart Lun copyright
+function smartlun_copyright() {
+global $wpdb;
+$copyright_dates = $wpdb->get_results("
+SELECT
+YEAR(min(post_date_gmt)) AS firstdate,
+YEAR(max(post_date_gmt)) AS lastdate
+FROM
+$wpdb->posts
+WHERE
+post_status = 'publish'
+");
+$output = '';
+if($copyright_dates) {
+$copyright = "&copy; " . $copyright_dates[0]->firstdate;
+if($copyright_dates[0]->firstdate != $copyright_dates[0]->lastdate) {
+$copyright .= '-' . $copyright_dates[0]->lastdate;
+}
+$output = $copyright;
+}
+return $output;
+}
+
+
+
+
+//Hide categories (project) from WordPress category widget
+function exclude_widget_categories($args){
+		$exclude = "19, 1";
+
+    $args["exclude"] = $exclude;
+    return $args;
+}
+add_filter("widget_categories_args","exclude_widget_categories");
+
+
+// LIST category project in PORTFOLIO!
+function my_portfolio_category( $query ) { 
+	if ( $query->is_page_template( 'portfolio.php' )) 
+		{ $query->set( 'cat', '19'); } 
+} 
+add_action( 'pre_get_posts', 'my_portfolio_category' );
+
+
+// NOT LIST category project in blogs
+function my_home_category( $query ) {
+    if ( is_home() && $query->is_main_query() ) {
+        // Exclude category ID 19
+        $query->set( 'category__not_in', array(19) ); 
+    }
+}
+add_action( 'pre_get_posts', 'my_home_category' );
+
+
+//Stop more link from jumping to middle of page
+function remove_more_jump_link($link) { 
+	$offset = strpos($link, '#more-');
+	if ($offset) {
+		$end = strpos($link, '"',$offset);
+	}
+	if ($end) {
+		$link = substr_replace($link, '', $offset, $end-$offset);
+	}
+	return $link;
+}
+add_filter('the_content_more_link', 'remove_more_jump_link');
 
 

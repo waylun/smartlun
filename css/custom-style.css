@@ -1,0 +1,425 @@
+
+
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  margin: 0;
+  margin-bottom: 180px;
+  font-family: 'Open Sans', sans-serif;
+
+}
+
+
+
+.entry-content {
+	font-size: 16px;
+	line-height: 29px;
+}
+
+
+.row {
+margin: auto 0;
+
+}
+@media only screen and (max-width: 768px) {
+  body {
+    margin-bottom: 450px;
+  }
+}
+#sticky-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 180px;
+}
+
+@media only screen and (max-width: 768px) {
+  #sticky-footer {
+    height: 450px;
+  }
+}
+h1,
+h2 {
+  font-weight: 700;
+  font-family: 'Merriweather Sans', sans-serif;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+  margin: 0;
+  border-radius: 0px;
+  
+
+}
+
+.navbar-inverse {
+  border-color: #222222;
+}
+
+
+
+.navbar:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+
+.navbar .custom-logo {
+  float: left;
+  margin-left: 5px;
+  width: 42px;
+  height: 42px;
+}
+.navbar .navbar-brand {
+  font-family: 'Lobster', cursive;
+  float: left;
+  font-size: 2em;
+  line-height: 12px;
+  margin-left: 0 !important;
+}
+.navbar .site-description {
+  width: 375px;
+  color: #888888;
+  padding-top: 17px;
+}
+@media only screen and (max-width: 480px) {
+  .navbar .site-description {
+    display: none;
+  }
+}
+.navbar #menu-top-menu {
+  font-family: 'Lobster', cursive;
+  font-size: 20px;
+  margin-top: 6px;
+}
+.navbar .navbar-toggle {
+  margin-top: 13px;
+  padding: 7px;
+}
+.nav-block {
+  height: 62px;
+}
+.carousel .welcome-cover {
+  height: 300px;
+  background-color: #A85444;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.carousel .welcome-cover .carousel-caption {
+  font-family: 'Merriweather Sans', sans-serif;
+  font-size: 5em;
+  top: 10px;
+}
+@media only screen and (max-width: 768px) {
+  .carousel {
+    float: left;
+    height: 100%;
+    width: 100%;
+  }
+}
+.calculate-area {
+  background-color: #EEEEEE;
+  height: 100%;
+  min-height: 200px;
+}
+.calculate-area .cal-num {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 30px;
+}
+.calculate-area .cal-title {
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 29px;
+}
+.calculate-area .cal-sm-title {
+  font-weight: 400;
+}
+.home-content {
+  background-color: #333333;
+  color: #EEEEEE;
+}
+.home-content h1 {
+  float: right;
+  font-style: italic;
+}
+.home-content div {
+  font-size: 23px;
+  line-height: 41px;
+}
+.home-content #myself {
+  margin-bottom: -11.5px;
+}
+.service-area {
+  background-color: #EEEEEE;
+  display: inline-block;
+  margin-bottom: -5px;
+}
+.service-area div {
+  margin-top: 15px;
+}
+.service-area .service-title {
+  margin-top: 5px;
+  font-weight: 700;
+  font-size: 18px;
+}
+.bottom-cover {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 180px;
+  background-color: #A85444;
+  color: #EEEEEE;
+}
+@media only screen and (max-width: 768px) {
+  .bottom-cover {
+    height: 450px;
+  }
+}
+.bottom-cover a {
+  color: #ED832F;
+}
+.bottom-cover .bottom-center {
+  float: none;
+  margin: 0 auto;
+}
+.bottom-cover .bottom-center .form-control:focus {
+  border-color: #999999;
+}
+.bottom-cover .bottom-center .search-submit {
+  color: #EEEEEE;
+  background-color: #999999;
+}
+.bottom-cover .bottom-center .search-submit:hover {
+  background-color: #666666;
+}
+.bottom-cover .bottom-center .search-submit:focus {
+  background-color: #666666;
+  outline: 0;
+}
+.bottom-cover .bottom-center .simple-social-icons {
+  margin-top: 10px;
+  margin-left: -5px;
+}
+.bottom-cover .bottom-center #myresume {
+  width: 181px;
+  color: #EEEEEE;
+  background-color: #999999;
+}
+.bottom-cover .bottom-center #myresume:hover {
+  background-color: #666666;
+}
+.bottom-cover .bottom-center #myresume:focus {
+  background-color: #666666;
+  outline: 0;
+}
+.site-footer {
+  position: absolute;
+  bottom: 0;
+    height: 23px;
+  width: 100%;
+  z-index: 9999;
+  background-color: #A85444;
+  
+}
+.site-footer a {
+  color: #222222;
+}
+.calendar-navigation {
+  margin: 0;
+}
+.calendar-navigation a {
+  text-decoration: none;
+}
+#categories-4,
+#black-studio-tinymce-2 {
+  float: left;
+}
+
+#black-studio-tinymce-2 {
+  max-width: 350px;
+} 
+
+#archives_calendar-5 {
+  float: right;
+  width: 250px;
+}
+@media only screen and (max-width: 768px) {
+  #archives_calendar-5 {
+    float: left;
+    margin-left: 20px;
+  }
+}
+.mypost .page-title {
+  color: #EEEEEE;
+}
+.post-whole-content {
+  background-color: #333333;
+}
+.post-each-content {
+  background-color: #EEEEEE;
+  padding: 5px 15px;
+  margin-top: 20px;
+}
+#post-140 {
+  display: block;
+}
+#post-140 .sticky-post,
+#post-140 .entry-footer {
+  display: none;
+}
+#post-265 {
+  display: block;
+}
+#post-265 .sticky-post,
+#post-265 .entry-footer {
+  display: none;
+}
+
+#post-265 .entry-content {
+  padding-bottom: 5px;
+}
+
+
+.archive-back {
+  background-color: #333333;
+}
+.page-header {
+  margin: 0 auto;
+}
+.page-header h1 {
+  color: #EEEEEE;
+}
+.comments-area {
+  margin-top: 10px;
+  padding: 12px;
+}
+.by-wpdiscuz {
+  display: none;
+}
+.nf-form-fields-required {
+  margin-bottom: 20px;
+}
+.posted-on,
+.cat-links,
+.tags-links {
+  margin-left: 10px;
+}
+.comments-link {
+  display: block;
+  font-weight: 700;
+}
+.comments-title{
+	font-size: 1.5em;
+}
+
+.comment-form-comment label{
+	display: block;
+}
+
+#mysubscribe {
+  font-size: 18px;
+}
+#mysubscribe input {
+      
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+#mysubscribe .wysija-submit {
+  margin: 0 auto;
+  border-radius: 5px;
+  background-color: #888888;
+    border: 0;
+    color: #EEEEEE;
+}
+
+
+#mysubscribe .wysija-submit:hover {
+
+  background-color: #666666; 
+}
+
+
+
+.nav-links .nav-previous {
+	float: left;
+}
+
+.nav-links .nav-next {
+	float: right;
+}
+
+.nav-links .nav-previous .meta-nav {
+	display: none;
+}
+
+.nav-links .nav-next .meta-nav {
+	display: none; 
+}
+
+.pagination {
+  background-color: #EEEEEE;
+  padding: 0 10px 20px 10px;
+}
+
+
+.olderprojects {
+color: #EEEEEE;
+    float: left;
+    font-size: 1.6em;
+    font-weight: 700;
+    margin-top: 20px;
+
+}
+
+.olderprojects a {
+
+color: #EEEEEE;
+
+}
+
+.newprojects {
+color: #EEEEEE;
+    float: right;
+    font-size: 1.6em;
+    font-weight: 700;
+    margin-top: 20px;
+    
+}
+
+.newprojects a{
+
+   color: #EEEEEE;
+    
+}
+
+
+.post-thumbnail {
+	display:none !important;
+}
+
+
+
+/*# sourceMappingURL=custom-style.css.map */

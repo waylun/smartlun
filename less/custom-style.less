@@ -1,0 +1,409 @@
+@contentfont: 'Open Sans', sans-serif;
+@firstfont: 'Lobster', cursive;
+@secondfont: 'Merriweather Sans', sans-serif;
+
+
+
+@stickyheight: 180px;
+@mobilestickyheight: 450px;
+// general style
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+
+body {
+	margin: 0;
+	margin-bottom: @stickyheight;
+	font-family: @contentfont;  
+	@media only screen and (max-width: 768px) {
+    	margin-bottom: @mobilestickyheight;
+}
+
+}
+
+
+
+#sticky-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: @stickyheight;
+  	@media only screen and (max-width: 768px) {
+    	height: @mobilestickyheight;
+}
+
+}
+
+
+h1, h2 {
+	font-weight: 700;
+	font-family: @secondfont;
+}
+
+
+// navigation 
+.navbar {
+	position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+	margin: 0;
+	border-radius: 0px;
+
+	&:after {
+        content: '';
+   	 	display: block;
+    	clear: both;
+    }
+
+	.custom-logo { 
+	float: left;
+	margin-left: 5px;
+	width: 42px;
+	height: 42px;
+	} 
+	.navbar-brand {
+	font-family: @firstfont;
+	float: left;
+	font-size: 2em;
+    line-height: 12px;
+    margin-left: 0 !important; 
+	}
+
+	.site-description {
+	width: 375px;
+	color:#888888;
+	padding-top: 17px;
+	@media only screen and (max-width: 480px) {
+    	display: none;
+	}
+	} 
+
+	#menu-top-menu {
+	font-family: @firstfont;
+	font-size: 20px;
+	margin-top: 6px;
+	}
+
+	.navbar-toggle {
+	margin-top: 13px;
+	padding: 7px;
+	}
+}
+
+.nav-block{
+	height: 62px;
+}
+
+// carousel
+.carousel {
+
+	// cover (height, color, position)
+	.welcome-cover {
+	.background-cover(300px , #A85444, center);
+
+	// carousel text
+	.carousel-caption{
+		font-family: @secondfont;
+		font-size: 5em;
+		top: 73px;
+	}
+
+
+
+	}
+
+    @media only screen and (max-width: 768px) {
+    	float: left;
+    	// display: none;
+    	height: 100%;
+    	width: 100%;
+	}
+
+
+
+
+	
+
+}
+
+
+// calculate area
+.calculate-area {
+	
+	background-color: #EEEEEE;
+	height: 100%;
+	min-height: 200px;
+
+	.cal-num{
+	font-weight: 700;
+	font-size: 40px;
+    line-height: 30px;
+    
+	}
+
+	.cal-title{
+	font-weight: 600;
+	font-size: 25px;
+    line-height: 29px;
+    
+	}
+
+	.cal-sm-title{
+		font-weight: 400;
+
+	}
+
+}
+
+
+//main article
+.home-content {
+	background-color: #333333;
+	color: #EEEEEE;
+	h1 {
+		float: right;
+		font-style: italic;
+	}
+	div	{
+		font-size: 23px;
+		line-height: 41px;
+	}
+
+	#myself{
+		margin-bottom: -11.5px;
+	}
+	
+}
+
+// service area
+
+.service-area {
+	background-color: #EEEEEE;
+	display: inline-block;
+	margin-bottom: -5px;
+
+    div {
+    	margin-top: 15px;
+
+    }
+	.service-title{
+		margin-top: 5px;
+		font-weight: 700;
+		font-size: 18px;
+	}
+	.service-desc{
+		// nothing
+	}
+}
+
+
+// bottem area
+.bottom-cover{
+
+	#sticky-footer;
+    background-color:  #A85444;
+	color: #EEEEEE;
+	a {
+		color: #ED832F;
+	}
+
+
+	// center bottom widgets start
+	.bottom-center{
+	float: none;
+    margin: 0 auto;
+
+   .form-control{
+   	&:focus{
+   		border-color:#999999;
+   	}
+
+
+   }
+    .search-submit {
+    	color: #EEEEEE;
+		background-color: #999999;
+		&:hover{
+			background-color: #666666;
+		}
+
+		&:focus{
+			background-color: #666666;
+			outline:0;
+		}
+    }
+
+	.simple-social-icons{
+		margin-top: 10px;
+		margin-left: -5px;
+	}
+
+	#myresume{
+		width: 181px;
+		.search-submit;
+	}
+	
+	}
+	// center bottom widgets end
+	
+
+}
+
+
+// site footer credit
+.site-footer{
+	position: absolute;
+
+	bottom: 0;
+	background-color: #A85444;
+	z-index: 99999;
+	a {
+		color: #222222;
+	}
+}
+
+//less variables
+.background-cover(@height, @color, @position) {
+		height: @height;
+		background-color: @color;
+		background-position: center @position;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		
+	}
+
+
+
+// Blog page....
+
+.calendar-navigation{
+    	margin: 0;
+    	a {text-decoration: none;}
+
+}
+
+#categories-4, #black-studio-tinymce-2 {
+	float: left;
+
+}
+
+#archives_calendar-5 {
+	float: right;
+	width: 250px;
+
+	 @media only screen and (max-width: 768px) {
+    	float: left;
+    	margin-left: 20px;
+    	
+	}
+}
+
+.mypost {
+
+	.page-title{
+		color: #EEEEEE;
+	}
+	
+}
+
+.post-whole-content {
+	background-color: #333333;
+}
+
+
+.post-each-content {
+	background-color:#EEEEEE;
+	padding: 5px 15px;
+	margin-top: 20px;
+}
+
+
+// stick top post 
+#post-140 {
+	display: block;
+	.sticky-post, .entry-footer {
+		display: none;
+	}
+}
+
+
+//stick top portfolio 
+#post-265 {
+	display: block;
+	.sticky-post, .entry-footer {
+		display: none;
+	}
+}
+
+// blog archieve / content
+.archive-back  {
+	background-color: #333333;
+}
+
+.page-header {
+	margin: 0 auto;
+
+	h1 {
+		color: #EEEEEE;
+	}
+	
+}
+
+.comments-area {
+	
+	margin-top: 10px;
+	padding: 12px;
+}
+
+.by-wpdiscuz {
+	display: none;
+}
+
+
+.nf-form-fields-required {
+	margin-bottom: 20px;
+}
+
+
+// post bottom lists 
+
+
+.posted-on, .cat-links, .tags-links {
+	margin-left: 10px;
+}
+
+.comments-link {
+	display: block;
+	font-weight: 700;
+	
+}
+
+// subscribe
+
+#mysubscribe {
+
+	font-size: 18px;
+	input {
+		color:#222222;
+	}
+
+	.wysija-submit {
+		 margin: 0 auto;
+		 border-radius: 5px;
+		 &:hover {
+		 	color:#888888;
+		 }
+		}   
+
+}

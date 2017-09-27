@@ -8,7 +8,7 @@
  */
 ?>
 
-<div class="author-info">
+<div class="author-info container">
 	<div class="author-avatar">
 		<?php
 		/**
